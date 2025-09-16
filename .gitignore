@@ -1,0 +1,5 @@
+# Node modules
+node_modules/
+
+# Skip AI context markdown
+GEMINI.md

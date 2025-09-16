@@ -1,0 +1,27 @@
+{
+  "name": "zsc",
+  "version": "1.0.0",
+  "description": "Zsh Supercharge Plugin Store CLI tools",
+  "main": "index.js",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/BadRat-in/zsc.git"
+  },
+  "author": "BadRat-in <rbmorena42@gmail.com>",
+  "license": "MPL-2.0",
+  "type": "module",
+  "scripts": {
+    "test": "jest",
+    "validate": "node tools/validator.js",
+    "init": "node tools/init.js"
+  },
+  "dependencies": {
+    "ajv": "^8.17.1"
+  },
+  "devDependencies": {
+    "jest": "^30.1.3"
+  },
+  "engines": {
+    "node": ">=18"
+  }
+}

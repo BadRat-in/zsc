@@ -1,0 +1,68 @@
+{
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "title": "ZSC Plugin Schema v1",
+  "description": "Schema for zsc plugin metadata",
+  "type": "object",
+  "properties": {
+    "schema": {
+      "type": "string",
+      "const": "v1"
+    },
+    "id": {
+      "type": "string",
+      "description": "Unique identifier for the plugin"
+    },
+    "name": {
+      "type": "string",
+      "description": "Human-readable name for the plugin"
+    },
+    "version": {
+      "type": "string"
+    },
+    "entry": {
+      "type": "string",
+      "description": "Path to the entry point of the plugin",
+      "default": "entry.zsh"
+    },
+    "dependencies": {
+      "type": "object",
+      "properties": {
+        "plugins": {
+          "type": "array",
+          "items": {
+            "type": "string"
+          }
+        },
+        "brew": {
+          "type": "array",
+          "items": {
+            "type": "string"
+          }
+        }
+      }
+    },
+    "author": {
+      "type": "object",
+      "properties": {
+        "name": {
+          "type": "string"
+        },
+        "email": {
+          "type": "string"
+        }
+      }
+    },
+    "repo": {
+      "type": "string"
+    },
+    "description": {
+      "type": "string"
+    }
+  },
+  "required": [
+    "schema",
+    "id",
+    "name",
+    "version"
+  ]
+}
