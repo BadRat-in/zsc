@@ -1,0 +1,9 @@
+[submodule "plugins/zsh-interactive-cd"]
+	path = plugins/zsh-interactive-cd
+	url = https://github.com/BadRat-in/zsh-interactive-cd.git
+[submodule "plugins/zsh-you-should-use"]
+	path = plugins/zsh-you-should-use
+	url = https://github.com/BadRat-in/zsh-you-should-use.git
+[submodule "plugins/zsh-modern-theme"]
+	path = plugins/zsh-modern-theme
+	url = https://github.com/BadRat-in/zsh-modern-theme.git
