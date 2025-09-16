@@ -49,9 +49,7 @@ chmod +x "${ZSC_BIN_PATH}"
 
 # 5. Configure .zshrc
 ZSC_CONFIG_BLOCK_START="# Zsh Supercharge"
-ZSC_CONFIG_LINE1="export PATH=\"
-$HOME/.zsc/bin:$PATH\"
-"
+ZSC_CONFIG_LINE1="export PATH=\"\$HOME/.zsc/bin:\$PATH\"\n"
 ZSC_CONFIG_LINE2='eval "$(zsc init -)"'
 
 if ! grep -q "zsc init" "${ZSHRC_PATH}"; then
