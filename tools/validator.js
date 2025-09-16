@@ -8,8 +8,16 @@ import Ajv from "ajv";
 
 const ajv = new Ajv({ allErrors: true, strict: true });
 
-// Get plugin.json file path (default ./plugin.json)
-const pluginFile = process.argv[2] || "./plugin.json";
+// Construct the plugin file path by adding prefix and postfix to plugin name passed in args
+// plugin name: <plugin_name>
+// plugin file: plugin.json
+// plugin location: ./plugins/<plugin_name>/plugin.json
+if (!process.argv[2]) {
+  console.error("Plugin name not provided");
+  process.exit(1);
+}
+const pluginName = process.argv[2];
+const pluginFile = path.join("plugins", pluginName, "plugin.json");
 
 // Find repo root (assumes git repo)
 const execSync = (cmd) =>
