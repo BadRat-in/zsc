@@ -24,7 +24,7 @@ The basic steps are:
     And you can validate it using the `validate` tool:
 
     ```bash
-    yarn validate plugins/<plugin-id>/plugin.json
+    yarn validate <plugin-id>
     ```
 
 4.  **Commit, push, and open a pull request.**
