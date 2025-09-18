@@ -1,0 +1,25 @@
+plugins:
+  - id: zsh-interactive-cd
+    name: Zsh Interactive CD
+    url: https://github.com/BadRat-in/zsh-interactive-cd.git
+    commit: 2535caa8887b3fe7197b328f374b3557842161ef
+    author:
+      name: Ravindra Singh
+      email: rbmorena42@gmail.com
+    description: Enhances the 'cd' command in Zsh with interactive features.
+  - id: zsh-you-should-use
+    name: Zsh You Should Use
+    url: https://github.com/BadRat-in/zsh-you-should-use.git
+    commit: 640831fae76592caaabb432e510c80622f7d61e6
+    author:
+      name: Ravindra Singh
+      email: rbmorena42@gmail.com
+    description: Reminds users of useful Zsh plugins and features.
+  - id: zsh-modern-theme
+    name: Zsh Modern Theme
+    url: https://github.com/BadRat-in/zsh-modern-theme.git
+    commit: f039325dfd9dc64c7f991961a23f8a009e0810d5
+    author:
+      name: Ravindra Singh
+      email: rbmorena42@gmail.com
+    description: A sleek and modern ZSH theme that automatically adapts to light and dark terminal themes.

@@ -2,7 +2,42 @@
 
 This guide provides a complete walkthrough for creating a new plugin, adding it to the Zsh Supercharge (`zsc`) plugin store, and maintaining it over time.
 
-## Step 1: Create Your Plugin Repository
+Ah, got it! 👍 We don’t need to enforce a fixed `<plugin-id>.plugin.zsh` name—contributors can name their entry point whatever they want, since `zsc` reads it from `plugin.json`.
+
+Here’s the corrected **plugin directory tree section**:
+
+---
+
+## Recommended Plugin Directory Structure
+
+Each plugin should follow this layout:
+
+```
+<plugin-repo>/
+├── README.md              # Optional, but recommended
+├── LICENSE                # Should be included and have MPL-2.0 license
+├── plugin.json            # Required metadata for the plugin
+├── <entry-point>.zsh      # Entry point script (name can vary, must match plugin.json)
+└── assets/                # Optional folder for images or other assets
+    └── ...
+```
+
+**Example:**
+
+```
+zsh-modern-theme/
+├── README.md
+├── LICENSE
+├── plugin.json
+├── modern-theme.zsh              # Entry point script, name from plugin.json
+└── screenshots/
+    ├── dark-theme.png
+    └── light-theme.png
+```
+
+> **Note:** The `plugin.json` file must include the plugin ID, name, author, email, description, and the entry point filename. Lazy/async flags are optional.
+
+### Step 1: Create Your Plugin Repository
 
 Before adding your plugin to `zsc`, it must exist in its own Git repository.
 
@@ -12,7 +47,7 @@ Before adding your plugin to `zsc`, it must exist in its own Git repository.
 4.  **Create a `plugin.json` file.** You can do this manually, or you can use the `zsc` `init` tool to generate one for you (see the next section).
 5.  **Commit and push your changes.**
 
-## Step 2: Add Your Plugin to `zsc` as a Submodule
+### Step 2: Add Your Plugin to `zsc` as a Submodule
 
 Once your plugin is in its own repository, you can add it to the `zsc` plugin store as a submodule.
 
@@ -46,7 +81,7 @@ Once your plugin is in its own repository, you can add it to the `zsc` plugin st
 
 5.  **Push your changes to your fork and open a pull request.**
 
-## Step 3: Updating Your Plugin
+### Step 3: Updating Your Plugin
 
 To update a plugin that has already been added to `zsc`, you need to update the submodule to point to the latest commit in your plugin's repository.
 
